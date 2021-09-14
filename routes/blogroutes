@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const blogControllers = require("../controllers/blogcontroller");
+
+router.get("/", blogControllers.blog_index); //01 redirect to blogs manin page
+router.get("/create", blogControllers.blog_create_get); //02 redirect create page
+router.post("/create", blogControllers.blog_create_post); //021 add new blog
+router.get("/:id", blogControllers.blog_details); //010 redirect blog to detail page
+router.delete("/:id", blogControllers.blog_delete); //011 delete blog by id
+
+module.exports = router;

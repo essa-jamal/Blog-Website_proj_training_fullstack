@@ -1,0 +1,47 @@
+1)  create package.json     npm init
+2)  create ejs              npm install ejs 
+3)  create express js       npm install express
+4)  path throw data  
+5)  middleware and morgan security (3rd party)  npm install morgan  
+6)  Public static
+
+my steps:
+A)  create templates (client side) 
+    1)  html
+    2)  css
+    3)  javascript
+
+B)  server side:
+    1)  create package.json
+    2)  use express js
+    3)  use ejs
+    4)  data path throw 
+    5)  middleware and security
+    6)  public static item
+    7)  join to DB using [mongodb Atlas] 
+    8)  API get post put
+    9)  express router & MVC  
+
+    block steps:
+    1)  frontend block:  [html   -   css -   javascript]
+    2)  backend block:   [expressjs - ejs - datapath & middleware &  security   -   static items]
+    3)  DataBase:   create DB - connection  - schema - model - API & express router - MVC
+    
+
+
+coder : Junior Developer or Junior Programmer
+programmer: are involved in a specific part of the project.
+developer: involved with a greater understanding of the full project scope.
+
+
+https://www.software.ac.uk/blog/2016-10-06-coder-programmer-or-software-developer-spot-difference
+
+every instance should have
+1)  views for an instance       [html - css - javascript - ejs]
+2)  model for data              [db - schema - model]
+3)  routefile for routes        [express - routers]
+4)  controller for the handlers [get - post - put - delete]
+
+5)  partials                    [head - nav - footer]
+6)  public staic items          [styles - images - javascript - etc]
+7)  404 page 

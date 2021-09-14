@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="details content">
+      <h2><%= blog.title %></h2>
+      <div class="content">
+        <p><%= blog.body %></p>
+      </div>
+      <a data-doc="<%= blog._id %>" class="delete">delete</a>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+    <script>
+      const trashcan = document.querySelector("a.delete");
+      trashcan.addEventListener("click", (e) => {
+        const endpoint = `/blogs/${trashcan.dataset.doc}`;
+        console.log(endpoint);
+        fetch(endpoint, { method: "DELETE" })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data.redirect, "we are in redirect");
+            window.location.href = data.redirect;
+          })
+          .catch((err) => console.log("error on delete 2", err));
+      });
+    </script>
+  </body>
+</html>
